@@ -1,38 +1,62 @@
-# Qwik + Vite
 
-## Qwik in CSR mode
+[English](README_EN.md)
 
-This starter is using a pure CSR (Client Side Rendering) mode. This means, that the application is fully bootstrapped in the browser. Most of Qwik innovations however take advantage of SSR (Server-Side Rendering) mode.
+# Qwik 2048 游戏
 
-```ts
-export default defineConfig({
-  plugins: [
-    qwikVite({
-      csr: true,
-    }),
-  ],
-})
+基于 Qwik 框架开发的经典 2048 数字游戏。
+
+## 项目特点
+
+- 使用 Qwik 框架的 CSR (Client Side Rendering) 模式
+- 完整的 2048 游戏逻辑实现
+- 支持键盘操作（方向键）
+- 中文界面
+- 响应式设计
+
+## 游戏规则
+
+1. 使用方向键移动数字块
+2. 当两个相同的数字块碰撞时，它们会合并成一个
+3. 目标：创造出数字 2048！
+
+## 技术栈
+
+- **框架**: Qwik 1.14.1
+- **构建工具**: Vite 7.0.4
+- **类型检查**: TypeScript 5.8.3
+- **开发模式**: CSR (Client Side Rendering)
+
+## 项目结构
+
+```
+src/
+├── app.tsx          # 主应用组件，包含2048游戏逻辑
+├── app.css          # 样式文件
+├── main.tsx         # 应用入口
+├── index.css        # 全局样式
+├── vite-env.d.ts    # Vite类型声明
+└── assets/          # 静态资源
+    └── qwik.svg     # Qwik图标
 ```
 
-Use `npm create qwik@latest` to create a full production ready Qwik application, using SSR and [QwikCity](https://qwik.dev/docs/qwikcity/), our server-side metaframwork.
-
-## Usage
+## 安装与运行
 
 ```bash
-$ npm install # or pnpm install or yarn install
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 预览生产版本
+npm run preview
 ```
 
-Learn more on the [Qwik Website](https://qwik.dev) and join our community on our [Discord](https://qwik.dev/chat)
+## 更多信息
 
-## Available Scripts
+了解更多关于 Qwik 的信息：[Qwik 官网](https://qwik.dev)
+加入社区：[Discord](https://qwik.dev/chat)
 
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
